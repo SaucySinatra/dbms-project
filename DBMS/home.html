@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Website</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="images/self-photo1.jpg">
+                </div>
+                <div class="about-col-2">
+                    <h1 class="sub-title">About Me</h1>
+                    <p>Hello there! My name is Hanz Rafael F. Espiritu, and I'm a driven individual from Taguig, a lively area in Manila, Philippines. 
+                        Pursuing a degree in Computer Engineering at the Technological Institute of the Philippines (TIP) Manila. 
+                        I find myself immersed in the dynamic world of technology as I make my way through the thrilling journey of academia.</p>
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab('hobbies')">Hobbies</p>
+                        <p class="tab-links" onclick="opentab('interests')">Interests</p>
+                    </div>
+                    <div class="tab-contents active-tab" id="hobbies">
+                        <ul>
+                            <li><span>Playing Computer/Video Games</span><br>- Nba 2k<br>- Dota<br>- Call of Duty</li>
+                            <!-- ... (more content) -->
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="interests">
+                        <ul>
+                            <!-- ... (more content) -->
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal container -->
+    <div id="aboutModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <!-- About Me content goes here -->
+            <h1>About Me</h1>
+            <p>Hello there! My name is Hanz Rafael F. Espiritu...</p>
+            <!-- ... (more content) -->
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
