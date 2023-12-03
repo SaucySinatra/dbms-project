@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio - Home</title>
+    <link rel="stylesheet" href="indexStyle.css">
+    <script src="https://kit.fontawesome.com/6f5af9e146.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.2.0/css/all.min.css">
+</head>
+<body>
+    <div id="header">
+        <div class="container">
+            <nav>
+                <a href="index.html">
+                    <img src="images/portfolio.png" class="logo">
+                </a>
+                <ul id="sidemenu">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="resume.html">Resumé</a></li>                    
+                    <li><a href="contact.html">Contact</a></li>
+                    <i class="fa-solid fa-xmark" onclick="closemenu()"></i>
+                </ul>
+                <i class="fa-solid fa-bars" onclick="openmenu()"></i>
+            </nav>
+        <div class="header-text">
+             <h1>Hi, I'm <span>Hanz Rafael</span></h1>
+             <p>2nd Year - College Student</p>
+             <a href="#about-me" class="about-button" onclick="scrollToAbout()">About Me</a>
+        </div>
+     </div>
+</div>
+<!-- about section-->
+<div id="about">
+<div class="container">
+    <div class="row">
+        <div class="about-col-1">
+            <img src="images/self-photo1.jpg">
+        </div>
+        <div class="about-col-2">
+            <h1 class="sub-title">About Me</h1>
+            <p>Hello there! My name is Hanz Rafael F. Espiritu, and I'm a driven individual from Taguig, a lively area in Manila, Philippines. 
+                Pursuing a degree in Computer Engineering at the Technological Institute of the Philippines (TIP) Manila. 
+                I find myself immersed in the dynamic world of technology as I make my way through the thrilling journey of academia.</p>
+                <div class="tab-titles">
+                    <p class="tab-links active-link" onclick="opentab('hobbies')">Hobbies</p>
+                    <p class="tab-links" onclick="opentab('interests')">Interests</p>
+                </div>
+                <div class="tab-contents active-tab" id="hobbies">
+                    <ul>
+                        <li><span>Playing Computer/Video Games</span><br>- Nba 2k<br>- Dota<br>- Call of Duty</li>
+                        <li><span>Local Explorations</span><br>- Around Manila<br>- Around Nueva Ecija</li>
+                        <li><span>Photography</span><br>- Cities<br>- Nature<br>- Random Sceneries</li>
+                        <li><span>Gymming</span><br>- Weightlifting<br>- Cardio<br>- HIIT</li>
+                    </ul>
+                </div>
+                <div class="tab-contents" id="interests">
+                    <ul>
+                        <li><span>Cryptocurrency</span><br>- Educational Platforms<br>- Podcasts<br>- Online Tutorials</li>
+                        <li><span>Drawing</span><br>- Art Mediums<br>- Art Styles<br>- Artists' Tutorials</li>
+                    </ul>
+                 </div>
+                 </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<script>
+    function scrollToAbout() {
+        var aboutSection = document.getElementById('about');
+        aboutSection.scrollIntoView({ behavior: 'smooth' });
+    }
+</script>
+
+<script>
+
+    var tablinks = document.getElementsByClassName("tab-links");
+    var tabcontents = document.getElementsByClassName("tab-contents");
+
+     function opentab(tabname){
+         for(tablink of tablinks){
+            tablink.classList.remove("active-link");
+        }
+        for(tabcontent of tabcontents){
+            tabcontent.classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab");
+    }
+    
+    </script>
+    
+<script>
+    var sidemenu = document.getElementById("sidemenu");
+    
+    function openmenu(){
+        sidemenu.style.right = "0";
+    }
+    function closemenu(){
+        sidemenu.style.right = "-150px";
+    }
+    </script>
+
+</body>
+</html>
